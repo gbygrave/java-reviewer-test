@@ -2,7 +2,7 @@ public class Deadlock {
     private Object process = new Object();
     private boolean stopped = true;
 
-    public void run() {
+    public synchronized void run() {
         synchronized (process) {
             isStopped();
         }
